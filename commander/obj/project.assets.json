@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Codi\\git\\commander\\commander\\commander.csproj",
-      "projectName": "commander",
-      "projectPath": "C:\\Users\\Codi\\git\\commander\\commander\\commander.csproj",
+      "projectUniqueName": "C:\\Users\\Codi\\git\\commander\\Commander\\Commander.csproj",
+      "projectName": "Commander",
+      "projectPath": "C:\\Users\\Codi\\git\\commander\\Commander\\Commander.csproj",
       "packagesPath": "C:\\Users\\Codi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Codi\\git\\commander\\commander\\obj\\",
+      "outputPath": "C:\\Users\\Codi\\git\\commander\\Commander\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

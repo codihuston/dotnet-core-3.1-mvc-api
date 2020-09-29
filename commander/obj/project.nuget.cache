@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vL2jPmfTuRrwNRPveDbwY42j9RszVP3bHnB0Z5TnX3Y9lZvW9ZB5mfkqKXMwqQFfNFjFtjkks4XpJ6c9ewjQgw==",
+  "dgSpecHash": "5K7PS35HzQh+HpxNGNnqGe8mlHGwK8dY8xWRylf+j3jkOQNO6smWCIdEstFmtL9em6P8MTnQ6/+cDkLlfJ1qdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Codi\\git\\commander\\commander\\commander.csproj",
+  "projectFilePath": "C:\\Users\\Codi\\git\\commander\\Commander\\Commander.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
