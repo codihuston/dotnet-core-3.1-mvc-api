@@ -35,7 +35,9 @@ namespace Commander.Controllers
     }
 
     // GET api/commands/{id}
-    [HttpGet("{id}")]
+    // Should be able to use nameof opertor to get method name, but Les has encountered issues with that.
+    // So, just explicitly name it
+    [HttpGet("{id}", Name="GetCommandById")]
     public ActionResult <CommandReadDto> GetCommandById(int id)
     {
       var commandItem = _repository.GetCommandById(id);
@@ -43,6 +45,26 @@ namespace Commander.Controllers
         return Ok(_mapper.Map<CommandReadDto>(commandItem)); 
       }
       return NotFound();
+    }
+
+    // POST api/commands
+    [HttpPost]
+    public ActionResult <CommandReadDto> CreateCommand(CommandCreateDto commandCreateDto)
+    {
+      // mapp the incoming DTO into a Command model
+      var commandModel = _mapper.Map<Command>(commandCreateDto);
+      // add model to dbset
+      _repository.CreateCommand(commandModel);
+      // persist changes
+      _repository.SaveChanges();
+
+      // convert to a DTO (for return)
+      var commandReadDto = _mapper.Map<CommandReadDto>(commandModel);
+
+      // return the DTO for the model that was just created
+      return CreatedAtRoute(nameof(GetCommandById),
+                            new { Id = commandReadDto.Id },
+                            commandReadDto);
     }
   }
 }
