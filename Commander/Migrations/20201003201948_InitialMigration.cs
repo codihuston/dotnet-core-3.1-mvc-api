@@ -2,7 +2,7 @@
 
 namespace Commander.Migrations
 {
-    public partial class InitialMigrations : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,9 +12,9 @@ namespace Commander.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    HowTo = table.Column<string>(nullable: true),
-                    Line = table.Column<string>(nullable: true),
-                    Platform = table.Column<string>(nullable: true)
+                    HowTo = table.Column<string>(maxLength: 255, nullable: false),
+                    Line = table.Column<string>(nullable: false),
+                    Platform = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
