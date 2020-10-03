@@ -11,7 +11,7 @@ namespace Commander.Data{
         {
             _context = context;
         }
-        public IEnumerable<Command> GetAppCommands()
+        public IEnumerable<Command> GetAllCommands()
         {
             var models = _context.Commands.ToList();
             return models;
