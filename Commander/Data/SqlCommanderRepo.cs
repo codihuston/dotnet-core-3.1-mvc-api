@@ -11,6 +11,12 @@ namespace Commander.Data{
         {
             _context = context;
         }
+
+        public void CreateCommand(Command cmd)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Command> GetAllCommands()
         {
             var models = _context.Commands.ToList();
@@ -21,6 +27,11 @@ namespace Commander.Data{
         {
             var models = _context.Commands.FirstOrDefault(p => p.Id == id);
             return models;
+        }
+
+        public bool SaveChanges()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
